@@ -1,4 +1,4 @@
-﻿// Exams.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+// Exams.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <iostream>
@@ -7,6 +7,7 @@ int main()
 {
     std::cout << "Hello World!\n";
     std::cout << "hgjfjdhfgveucgerc";
+    std::cout << "jhfgvrifvirfvbrifvbriuvb";
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
