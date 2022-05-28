@@ -8,7 +8,7 @@
 int main()
 {
     std::cout << "Hello World!\n";
-
+    student abitur = new student("Вася", "00000000");
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
