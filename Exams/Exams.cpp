@@ -2,13 +2,17 @@
 //
 
 #include <iostream>
-
 #include "Student.h"
+
+using namespace std;
 
 int main()
 {
     std::cout << "Hello World!\n";
-    student abitur = new student("Вася", "00000000");
+    student abitur("Vasya", "00000000");
+    cout << abitur.get_name();
+    system("pause");
+    return EXIT_SUCCESS;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
