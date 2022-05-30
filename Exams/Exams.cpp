@@ -1,5 +1,6 @@
 #include <iostream>
-#include "user.h"
+#include <user.h>
+#include "user_test.h"
 #include<string>
 using namespace std;
 
@@ -10,7 +11,7 @@ int main()
     string id = "00000000";
     string exam = "00000000";
 
-    user abi()
+    user ab = user(name, id);
 
     //student abitur();
     //user at(name, id);
