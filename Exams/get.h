@@ -2,13 +2,13 @@
 #include <fstream>
 #include <string>
 using namespace std;
-class get
+class getter
 {
 	bool status;
 	string path;
 	ifstream input;
 public:
-	get(string);
+	getter(string);
 	void close_stream();
 
 
