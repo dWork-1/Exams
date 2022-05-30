@@ -1,5 +1,9 @@
 #include "exam.h"
 
+exam::exam()
+{
+}
+
 exam::exam(string id, string name)
 {
 	this->id_faculty = id;

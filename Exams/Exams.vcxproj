@@ -141,11 +141,13 @@
   <ItemGroup>
     <ClCompile Include="exam.cpp" />
     <ClCompile Include="Exams.cpp" />
+    <ClCompile Include="getInf.cpp" />
     <ClCompile Include="student.cpp" />
     <ClCompile Include="user.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="exam.h" />
+    <ClInclude Include="getInf.h" />
     <ClInclude Include="student.h" />
     <ClInclude Include="user.h" />
   </ItemGroup>

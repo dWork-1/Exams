@@ -8,6 +8,7 @@ class exam
 	string name;
 	string id_faculty;
 public:
+	exam();
 	exam(string, string);
 	exam(string, string, int);
 
