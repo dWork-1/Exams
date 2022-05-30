@@ -1,7 +1,4 @@
 #include <iostream>
-#include "user.h"
-#include "user_test.h"
-#include "Student.h"
 #include<string>
 using namespace std;
 
@@ -11,8 +8,6 @@ int main()
     string name = "Vasya";
     string id = "00000000";
     string exam = "00000000";
-
-    Student st;
 
     //student abitur();
     //user at(name, id);
