@@ -1,6 +1,3 @@
-// Exams.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
 #define _USE_MATH_DEFINES
 #include <iostream>
 #include <iomanip>
@@ -121,70 +118,6 @@ void Abiturient::Rating::task_1(const int sz, const string filename, string& s_z
     }
 }
 
-//void Abiturient::Rating::task_2(const int sz, const string filename, string& s_z, const int limit)
-//{
-//    int n = 0, sum = 0, index = 0, k = 0;
-//    cout << "Список абитуриентов, сумма который не меньше " << limit << " : " << endl;
-//    for (int i = 0; i < sz; i++)
-//    {
-//        for (int j = 0; j < 19; j++)
-//        {
-//            // находим сумму оценок абитуриента
-//            if (students[i].get_rating()[j] != ',' && (j == 0 || students[i].get_rating()[j - 1] == ','))
-//            {
-//                sum += (students[i].get_rating()[j] - '0');
-//                //cout << sum << "\t";
-//            }
-//            else if (students[i].get_rating()[j] == ',') index = j + 1;
-//        }
-//        if (sum >= limit)  // поиск абитуринтов, сумма которых нам подходит по условию
-//        {
-//            cout << k + 1 << ". ";
-//            students[i].show();
-//            students[i].show_f(s_z);
-//            students[i].show_1(filename, s_z);
-//            n++; k++;
-//            cout << endl;
-//        }
-//        sum = 0;
-//    }
-//    if (n == 0) { cout << "Абитуриентов не найдено." << endl; }
-//
-//}
-//void Rating::task_3(const int sz, const string filename, string& s_z, const int limit)
-//{
-//    int n = 0, sum = 0, index = 0, k = 0;
-//    cout << "Список абитуриентов, имеющих полупроходной балл и выше: " << endl;
-//    for (int i = 0; i < sz; i++)
-//    {
-//        for (int j = 0; j < 19; j++)
-//        {
-//            // аналогично
-//            if (students[i].get_rating()[j] != ',' && (j == 0 || students[i].get_rating()[j - 1] == ','))
-//            {
-//                sum += (students[i].get_rating()[j] - '0');
-//                //cout << sum << "\t";
-//
-//            }
-//            else if (students[i].get_rating()[j] == ',') index = j + 1;
-//            if (sum >= limit / 2) // поиск абитуриентов с полупроходным и выше баллом
-//            {
-//                cout << k + 1 << ". ";
-//                students[i].show();
-//                students[i].show_f(s_z);
-//                students[i].show_1(filename, s_z);
-//                n++; k++;
-//                break;
-//                cout << endl;
-//            }
-//        }
-//        sum = 0;
-//    }
-//    if (n == 0) { cout << "Абитуриентов не найдено." << endl; }
-//    cout << "Найдено " << k << " абитуриентов." << endl;
-//}
-
-
 void get_data_1(const string filename, int& sz, bool& u, int& y) // подсчет кол-ва строк в файле
 {
     char c;
@@ -276,13 +209,3 @@ int main() {
     system("pause");
     return EXIT_SUCCESS;
 }
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
