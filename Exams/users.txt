@@ -1,0 +1,3 @@
+00000000  Vasya  student
+00000001  Petya  student
+00000002  Irina  teacher
