@@ -139,13 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Abiturient.cpp" />
     <ClCompile Include="Exams.cpp" />
-    <ClCompile Include="Rating.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Abiturient.h" />
-    <ClInclude Include="Rating.h" />
+    <Text Include="Base.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
