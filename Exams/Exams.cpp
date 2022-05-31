@@ -1,5 +1,6 @@
 #include <iostream>
-#include "student.h"
+#include "getInf.h"
+
 #include<string>
 using namespace std;
 
@@ -10,9 +11,9 @@ int main()
     string id = "00000000";
     string exam = "00000000";
 
-    student abitur(name, id);
-
-    cout << abitur.get_name() << endl;
+    getInf getter;
+    getter = getInf("marks.txt");
+    cout << getter.get_line();
 
     system("pause");
     return EXIT_SUCCESS;

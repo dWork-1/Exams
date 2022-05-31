@@ -1,5 +1,7 @@
 #include "getInf.h"
+#include <iostream>
 
+using namespace std;
 
 struct out_to_screen
 {
@@ -7,7 +9,7 @@ public:
 	void out_error(int type_error) {
 		switch (type_error) {
 		case 1:
-			cerr << "Don`t find or can`t open file" << endl;
+			cout << "Don`t find or can`t open file" << endl;
 		}
 	}
 };
@@ -22,7 +24,7 @@ public:
 	}
 };
 
-struct exam :fuculty
+struct exam :faculty
 {
 	int mark;
 	string id_exam;
@@ -46,8 +48,11 @@ getInf::~getInf()
 {
 }
 
-string getInf::get_exam()
-{
+string getInf::get_line()
+{	
+
+	open_stream_read();
+	
 	string exam_line;
 	getline(input, exam_line);
 	return exam_line;
@@ -55,24 +60,37 @@ string getInf::get_exam()
 
 void getInf::set_exam(string id_student, exam Exam, string id_teacher)
 {
-	if (input.is_open()) {
-		open_stream();
-	}
+	open_stream_write();
 	string exam_line = id_student + Exam.get_id_faculty() + Exam.get_id_exam()+ id_teacher;
-	input << endl << exam_line;
+	output << endl << exam_line;
 }
 
-void getInf::open_stream()
+bool getInf::open_stream_read()
 {
 	input.open(path);
 	if (input.fail()) {
-		out_to_screen out;
-		out.out_error(1);
+		return false;
 	}
+	return true;
 }
 
-void getInf::close_stream()
+void getInf::close_stream_read()
 {
 	input.close();
+}
+
+bool getInf::open_stream_write()
+{
+
+	output.open(path, ios::app);
+	if (output.fail()) {
+		return false;
+	}
+	return true;
+}
+
+void getInf::close_stream_write()
+{
+	output.close();
 }
 
