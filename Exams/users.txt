@@ -1,3 +1,3 @@
-00000000  Vasya  student
-00000001  Petya  student
-00000002  Irina  teacher
+00000000  student Vasya_O  
+00000001  student Petya_I
+00000002  teacher Irina_U

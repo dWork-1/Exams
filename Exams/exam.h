@@ -1,12 +1,12 @@
 #pragma once
 #include <string>
+#include "getInf.h"
 
 using namespace std;
 class exam
 {
 	int mark;
 	string name;
-	string id_faculty;
 public:
 	exam();
 	exam(string, string);

@@ -4,7 +4,7 @@ exam::exam()
 {
 }
 
-exam::exam(string id, string name)
+exam::exam(string idFaculty, string idName)
 {
 	this->id_faculty = id;
 	this->name = name;
