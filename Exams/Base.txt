@@ -1,4 +1,4 @@
-00000000 Radchenko
-00000001 Turgenev
-00000002 Kydinov
-00000003 Tarasevich
+00000000 student Radchenko 
+00000001 student Turgenev
+00000002 student Kydinov
+00000003 teacher Tarasevich
