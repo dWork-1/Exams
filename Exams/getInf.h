@@ -25,10 +25,6 @@ public:
 
 	bool open_stream_write();
 	void close_stream_write();
-	//Добавляет оценку для экзамена(преподаватель)
-	void set_mark_to_database(int mark, exam Exam, string student);
-
-
 	
 };
 
