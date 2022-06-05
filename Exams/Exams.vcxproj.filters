@@ -22,4 +22,7 @@
   <ItemGroup>
     <Text Include="Base.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="TestMark.stxt" />
+  </ItemGroup>
 </Project>
