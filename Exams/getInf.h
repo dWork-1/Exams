@@ -15,16 +15,20 @@ public:
 	getInf();
 	getInf(string);
 	~getInf();
+
+	
 	//Функция должна вернуть строку из файла 
-	string get_line();
+	bool get_line(string&);
 	//Функция для студента добавляет экзамен в файл marks.txt
-	void set_exam(string student, exam Examб, string);
+	void set_exam(string student, exam Examб, string, int);
 	//открытие и закрытие базы данных 
 	bool open_stream_read();
 	void close_stream_read();
 
 	bool open_stream_write();
 	void close_stream_write();
+
+	void set_mark();
 	
 };
 

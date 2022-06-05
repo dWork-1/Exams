@@ -48,17 +48,19 @@ getInf::~getInf()
 {
 }
 
-string getInf::get_line()
+bool getInf::get_line(string& exam_line)
 {	
 
-	open_stream_read();
+	if (open_stream_read()) {
+		getline(input, exam_line);
+		return true;
+	}
+		return false;
 	
-	string exam_line;
-	getline(input, exam_line);
-	return exam_line;
+	
 }
 
-void getInf::set_exam(string id_student, exam Exam, string id_teacher)
+void getInf::set_exam(string id_student, exam Exam, string id_teacher, int mark)
 {
 	open_stream_write();
 	string exam_line = id_student + Exam.get_id_faculty() + Exam.get_id_exam()+ id_teacher;
@@ -67,7 +69,9 @@ void getInf::set_exam(string id_student, exam Exam, string id_teacher)
 
 bool getInf::open_stream_read()
 {
-	input.open(path);
+	if (!input.is_open()) {
+		input.open(path, ios::in | ios::out | ios::binary);
+	}
 	if (input.fail()) {
 		return false;
 	}

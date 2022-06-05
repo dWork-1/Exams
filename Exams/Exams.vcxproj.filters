@@ -24,10 +24,13 @@
     <ClCompile Include="student.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="exam.cpp">
+    <ClCompile Include="getInf.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="getInf.cpp">
+    <ClCompile Include="logic.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="error.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,10 +41,10 @@
     <ClInclude Include="student.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="exam.h">
+    <ClInclude Include="getInf.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="getInf.h">
+    <ClInclude Include="logic.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

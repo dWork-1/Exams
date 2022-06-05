@@ -8,14 +8,12 @@ struct exam;
 class student :
     public user
 {
-    const unsigned int format = 8;
-    int num_exam;
    // vector<exam> exams_list;
 
     getInf reader;
 
 public:
-    student(string, string,string);
+    student(string, string);
 
     void set_list();
 };
