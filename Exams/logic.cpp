@@ -25,8 +25,21 @@ string logic::login(const string path)
 
     bool flag = true;
     while (flag) {
+        string line;
+        if (inf.get_line(line)) {
 
+            if (line.find(answer) >= 0) {
+                return line;
+
+
+
+                flag = false;
+            }
+            break;
+        }
     }
+
+
     
 }
 
