@@ -7,7 +7,7 @@ using namespace std;
 
 Out_to_screen::Out_to_screen()
 {
-	user = "Noname";
+	user_name = "Noname";
 }
 
 Out_to_screen::~Out_to_screen() { }
@@ -50,7 +50,7 @@ void Out_to_screen::menu_login()
 	cout << "\tЧтобы войти в систему, введите Ваш логин." << endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 	cout << "\tLogin : ";
-	get_answer(user);
+	get_answer(user_name);
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 }
 
@@ -59,7 +59,7 @@ void Out_to_screen::menu_new_login()
 	cout << "\tВведите логин нового пользователя." << endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 	cout << "\tLogin : ";
-	get_answer(user);
+	get_answer(user_name);
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl;
 }
 
@@ -67,7 +67,7 @@ void Out_to_screen::menu_authorization()
 {
 	cout << endl;
 	cout << "\tВход потвержден." << endl;
-	cout << "\tДобро пожаловать, " << user << "."<<endl;
+	cout << "\tДобро пожаловать, " << user_name << "."<<endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 
 }
@@ -95,5 +95,5 @@ void Out_to_screen::get_answer(string& a)
 }
 string Out_to_screen::get_user()
 {
-	return user;
+	return user_name;
 }

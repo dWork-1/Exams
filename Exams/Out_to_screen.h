@@ -2,7 +2,7 @@
 #include <string>
 class Out_to_screen
 {
-	string user;
+	string user_name;
 
 public:
 	Out_to_screen();
