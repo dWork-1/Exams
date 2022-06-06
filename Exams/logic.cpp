@@ -46,5 +46,3 @@ string logic::login(const string path)
 void logic::registration()
 {
 }
-
-bool 
