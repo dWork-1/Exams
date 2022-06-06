@@ -1,9 +1,11 @@
 
 #include <iostream>
+#include "getInf.h"
+#include "logic.h"
+
 #include<string>
 #include "Out_to_screen.h"
 
-using namespace std;
 int main()
 {
    
