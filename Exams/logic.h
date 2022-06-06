@@ -9,6 +9,7 @@ class logic
 public:
 	logic();
 
+
 	string login(const string path);
 	void registration();
 
