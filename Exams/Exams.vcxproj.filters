@@ -18,6 +18,7 @@
     <ClCompile Include="Exams.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+
     <ClCompile Include="user.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -31,10 +32,14 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="error.cpp">
+
+    <ClCompile Include="Out_to_screen.cpp">
+
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+
     <ClInclude Include="user.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
@@ -45,6 +50,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="logic.h">
+
+    <ClInclude Include="Out_to_screen.h">
+
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
