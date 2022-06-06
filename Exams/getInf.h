@@ -9,8 +9,8 @@ struct exam;
 class getInf
 {
 	string path;
-	ifstream input;
-	ofstream output;
+	fstream input;
+	fstream output;
 public:
 	getInf();
 	getInf(string);
@@ -21,6 +21,8 @@ public:
 	bool get_line(string&);
 	//Функция для студента добавляет экзамен в файл marks.txt
 	void set_exam(string student, exam Examб, string, int);
+
+	void set_mark(string student, exam Examб, string, int);
 	//открытие и закрытие базы данных 
 	bool open_stream_read();
 	void close_stream_read();
