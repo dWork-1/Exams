@@ -140,12 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Exams.cpp" />
+    <ClCompile Include="Out_to_screen.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Base.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="TestMark.stxt" />
+    <ClInclude Include="Out_to_screen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

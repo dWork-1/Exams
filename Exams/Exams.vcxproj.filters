@@ -18,11 +18,13 @@
     <ClCompile Include="Exams.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Out_to_screen.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Base.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="TestMark.stxt" />
+    <ClInclude Include="Out_to_screen.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
