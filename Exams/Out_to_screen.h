@@ -1,8 +1,8 @@
 #pragma once
+#include <string>
 class Out_to_screen
 {
-private:
-	string user;
+	string user_name;
 
 public:
 	Out_to_screen();
@@ -13,5 +13,10 @@ public:
 	void menu_new_login();
 	void menu_authorization();
 	int get_answer();
+
+	// Добавил метод для считывания имени пользователя
+	void get_answer(string&);
+	//Добали геттер для user
+	string get_user();
 };
 
