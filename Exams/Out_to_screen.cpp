@@ -1,14 +1,16 @@
 #include "Out_to_screen.h"
 #include <iostream>
+#include <string>
 #include <iomanip>
 
 using namespace std;
 Out_to_screen::Out_to_screen()
 {
-	user = "Noname";
+	user_name = "Noname";
 }
 
 Out_to_screen::~Out_to_screen() { }
+
 
 void Out_to_screen::swtch(int a)
 {
@@ -36,37 +38,34 @@ void Out_to_screen::swtch(int a)
 
 void Out_to_screen::menu_option()
 {
-	cout << "\tÄëÿ âõîäà â ñèñòåìó -> 1." << endl;
-	cout << "\tÄëÿ ðåãèñòðàöèè íîâîãî ïîëüçîâàòåëÿ -> 2." << endl;
+	cout << "\tÃ„Ã«Ã¿ Ã¢ÃµÃ®Ã¤Ã  Ã¢ Ã±Ã¨Ã±Ã²Ã¥Ã¬Ã³ -> 1." << endl;
+	cout << "\tÃ„Ã«Ã¿ Ã°Ã¥Ã£Ã¨Ã±Ã²Ã°Ã Ã¶Ã¨Ã¨ Ã­Ã®Ã¢Ã®Ã£Ã® Ã¯Ã®Ã«Ã¼Ã§Ã®Ã¢Ã Ã²Ã¥Ã«Ã¿ -> 2." << endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
-	cout << "\tÂàø âûáîð : ";
+	cout << "\tÃ‚Ã Ã¸ Ã¢Ã»Ã¡Ã®Ã° : ";
 }
 
 void Out_to_screen::menu_login()
 {
-	cout << "\t×òîáû âîéòè â ñèñòåìó, ââåäèòå Âàø ëîãèí." << endl;
+	cout << "\tÃ—Ã²Ã®Ã¡Ã» Ã¢Ã®Ã©Ã²Ã¨ Ã¢ Ã±Ã¨Ã±Ã²Ã¥Ã¬Ã³, Ã¢Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã‚Ã Ã¸ Ã«Ã®Ã£Ã¨Ã­." << endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 	cout << "\tLogin : ";
-	cin >> user;
+	get_answer(user_name);
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
-	swtch(3);
 }
 
 void Out_to_screen::menu_new_login()
 {
-	cout << "\tÂâåäèòå ëîãèí íîâîãî ïîëüçîâàòåëÿ." << endl;
+	cout << "\tÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã«Ã®Ã£Ã¨Ã­ Ã­Ã®Ã¢Ã®Ã£Ã® Ã¯Ã®Ã«Ã¼Ã§Ã®Ã¢Ã Ã²Ã¥Ã«Ã¿." << endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 	cout << "\tLogin : ";
-	cin >> user;
+	get_answer(user_name);
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl;
-	swtch(3);
 }
 
 void Out_to_screen::menu_authorization()
 {
 	cout << endl;
-	cout << "\tÂõîä ïîòâåðæäåí." << endl;
-	cout << "\tÄîáðî ïîæàëîâàòü, " << user << "."<< endl;
+	cout << "\tÃ„Ã®Ã¡Ã°Ã® Ã¯Ã®Ã¦Ã Ã«Ã®Ã¢Ã Ã²Ã¼, " << user_name << "."<<endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 
 }
@@ -84,4 +83,15 @@ int Out_to_screen::get_answer()
 	cin.clear();
 	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	return a;
+}
+
+
+void Out_to_screen::get_answer(string& a)
+{
+	getline(cin, a);
+	return ;
+}
+string Out_to_screen::get_user()
+{
+	return user_name;
 }
