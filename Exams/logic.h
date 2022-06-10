@@ -11,7 +11,7 @@ public:
 
 
 	string login(const string path, string);
-	void registration();
+	void registration(const string);
 
 };
 

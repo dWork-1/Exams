@@ -32,6 +32,9 @@ string logic::login(const string path, string name)
     
 }
 
-void logic::registration()
+void logic::registration(const string path)
 {
+
+
+
 }

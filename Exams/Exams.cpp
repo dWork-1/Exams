@@ -31,7 +31,7 @@ int main()
             user=brain.login(path_users, screen.get_user());
             break;
         case 2:
-            brain.registration();
+            brain.registration(path_users);
             break;
         default:
             break;
@@ -44,8 +44,11 @@ int main()
             //Мне кажется здесь стоит вывести сообщение,что не нашло такого пользователя в базе
             //Зарегестрируйтесь или попробуйте ввойти снова.
         }
-        system("pause");
+        system("pause>nul");
     }
+
+
+
     return EXIT_SUCCESS;
 }
 
