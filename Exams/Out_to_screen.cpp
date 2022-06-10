@@ -4,7 +4,6 @@
 #include <iomanip>
 
 using namespace std;
-
 Out_to_screen::Out_to_screen()
 {
 	user_name = "Noname";
@@ -39,15 +38,15 @@ void Out_to_screen::swtch(int a)
 
 void Out_to_screen::menu_option()
 {
-	cout << "\tÄëÿ âõîäà â ñèñòåìó -> 1." << endl;
-	cout << "\tÄëÿ ðåãèñòðàöèè íîâîãî ïîëüçîâàòåëÿ -> 2." << endl;
+	cout << "\tÃ„Ã«Ã¿ Ã¢ÃµÃ®Ã¤Ã  Ã¢ Ã±Ã¨Ã±Ã²Ã¥Ã¬Ã³ -> 1." << endl;
+	cout << "\tÃ„Ã«Ã¿ Ã°Ã¥Ã£Ã¨Ã±Ã²Ã°Ã Ã¶Ã¨Ã¨ Ã­Ã®Ã¢Ã®Ã£Ã® Ã¯Ã®Ã«Ã¼Ã§Ã®Ã¢Ã Ã²Ã¥Ã«Ã¿ -> 2." << endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
-	cout << "\tÂàø âûáîð : ";
+	cout << "\tÃ‚Ã Ã¸ Ã¢Ã»Ã¡Ã®Ã° : ";
 }
 
 void Out_to_screen::menu_login()
 {
-	cout << "\t×òîáû âîéòè â ñèñòåìó, ââåäèòå Âàø ëîãèí." << endl;
+	cout << "\tÃ—Ã²Ã®Ã¡Ã» Ã¢Ã®Ã©Ã²Ã¨ Ã¢ Ã±Ã¨Ã±Ã²Ã¥Ã¬Ã³, Ã¢Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã‚Ã Ã¸ Ã«Ã®Ã£Ã¨Ã­." << endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 	cout << "\tLogin : ";
 	get_answer(user_name);
@@ -56,7 +55,7 @@ void Out_to_screen::menu_login()
 
 void Out_to_screen::menu_new_login()
 {
-	cout << "\tÂâåäèòå ëîãèí íîâîãî ïîëüçîâàòåëÿ." << endl;
+	cout << "\tÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã«Ã®Ã£Ã¨Ã­ Ã­Ã®Ã¢Ã®Ã£Ã® Ã¯Ã®Ã«Ã¼Ã§Ã®Ã¢Ã Ã²Ã¥Ã«Ã¿." << endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 	cout << "\tLogin : ";
 	get_answer(user_name);
@@ -66,8 +65,7 @@ void Out_to_screen::menu_new_login()
 void Out_to_screen::menu_authorization()
 {
 	cout << endl;
-	cout << "\tÂõîä ïîòâåðæäåí." << endl;
-	cout << "\tÄîáðî ïîæàëîâàòü, " << user_name << "."<<endl;
+	cout << "\tÃ„Ã®Ã¡Ã°Ã® Ã¯Ã®Ã¦Ã Ã«Ã®Ã¢Ã Ã²Ã¼, " << user_name << "."<<endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 
 }
