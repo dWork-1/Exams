@@ -8,26 +8,25 @@ logic::logic()
 {
 }
 
-string logic::login(const string path)
+string logic::login(const string path, string name)
 {
     getInf inf(path);
     
 
     bool flag = true;
- /*   while (flag) {
+    while (flag) {
         string line;
         if (inf.get_line(line)) {
 
-            if (line.find(answer) >= 0) {
+            if (line.find(name) >= 0) {
                 return line;
-
-
-
-                flag = false;
             }
-            break;
         }
-    }*/
+        else {
+            return "";
+        }
+    }
+
 
 
     

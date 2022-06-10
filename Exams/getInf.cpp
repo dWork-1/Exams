@@ -88,14 +88,13 @@ void getInf::set_mark(string student, exam Exam, string id_teacher, int mark)
 bool getInf::open_stream_read()
 {
 	if (!input.is_open()) {
-		input.open(path, ios::in | ios::out | ios::binary);
+		input.open(path, ios::in | ios::out );
 	}
-	if (!input.eof()) {
+	if (input.eof()) {
 		input.close();
-	}
-	if (input.fail()) {
 		return false;
 	}
+
 	return true;
 }
 

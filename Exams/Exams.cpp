@@ -3,32 +3,48 @@
 #include "getInf.h"
 #include "logic.h"
 
+#include <Windows.h>
+
 #include<string>
 #include "Out_to_screen.h"
 
 int main()
 {
-    const string path_users = "user.txt";
+
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+
+    const string path_users = "users.txt";
     Out_to_screen screen;
     logic brain;
+    bool flag = true;
 
+    string user="";
 
-    screen.swtch(0);
-    int answer = screen.get_answer();
-    screen.swtch(answer);
-    switch (answer)
-    {
-    case 1:
-        brain.login(path_users);
-        break;
-    case 2:
-        brain.registration();
-        break;
-    default:
-        break;
+    while (flag) {
+        screen.swtch(0);
+        int answer = screen.get_answer();
+        screen.swtch(answer);
+        switch (answer)
+        {
+        case 1:
+            user=brain.login(path_users, screen.get_user());
+            break;
+        case 2:
+            brain.registration();
+            break;
+        default:
+            break;
+        }
+        if (user.size() != 0) {
+            screen.swtch(3);
+            break;
+        }
+        else {
+            //
+        }
+        system("pause");
     }
-    screen.menu_authorization();
-
     return EXIT_SUCCESS;
 }
 

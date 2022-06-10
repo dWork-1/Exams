@@ -10,7 +10,7 @@ public:
 	logic();
 
 
-	string login(const string path);
+	string login(const string path, string);
 	void registration();
 
 };
