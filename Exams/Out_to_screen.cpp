@@ -3,8 +3,6 @@
 #include <iomanip>
 
 using namespace std;
-setlocale(LC_ALL, "Russian");
-
 Out_to_screen::Out_to_screen()
 {
 	user = "Noname";
@@ -16,7 +14,7 @@ void Out_to_screen::swtch(int a)
 {
 	switch (a)
 	{
-	case 1:
+	case 0:
 		system("cls");
 		menu_option();
 		break;
@@ -68,7 +66,7 @@ void Out_to_screen::menu_authorization()
 {
 	cout << endl;
 	cout << "\tВход потвержден." << endl;
-	cout << "\tДобро пожаловать, " << user << "." endl;
+	cout << "\tДобро пожаловать, " << user << "."<< endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 
 }
