@@ -1,5 +1,4 @@
 #include "Out_to_screen.h"
-#include "Out_to_screen.h"
 #include <iostream>
 #include <string>
 #include <iomanip>
