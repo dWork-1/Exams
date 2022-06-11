@@ -61,7 +61,7 @@ void Out_to_screen::menu_login()
 	cout << "\tЧтобы войти в систему, введите Ваш логин." << endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 	cout << "\tLogin : ";
-	cin >> user;
+	cin >> user_name;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 	swtch(3);
 }
@@ -71,7 +71,7 @@ void Out_to_screen::menu_new_login()
 	cout << "\tВведите логин нового пользователя." << endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 	cout << "\tLogin : ";
-	cin >> user;
+	cin >> user_name;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl;
 	swtch(3);
 }
@@ -80,7 +80,7 @@ void Out_to_screen::menu_authorization()
 {
 	cout << endl;
 	cout << "\tВход потвержден." << endl;
-	cout << "\tДобро пожаловать, " << user << "." << endl;
+	cout << "\tДобро пожаловать, " << user_name << "." << endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 	setw(4);
 }
