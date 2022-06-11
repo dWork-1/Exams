@@ -1,5 +1,8 @@
 #pragma once
 #include <string>
+
+using namespace std;
+
 class Out_to_screen
 {
 	string user_name;
