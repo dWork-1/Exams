@@ -1,3 +1,4 @@
-0001 student Vasya_O  
-0002 student Petya_I
-0003 teacher Irina_U
+Vasya_O student 0001
+Petya_I student 0002
+Irina_U teacher 0003
+Denys student 0004

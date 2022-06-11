@@ -17,8 +17,8 @@ string logic::login(const string path, string name)
     while (flag) {
         string line;
         if (inf.get_line(line)) {
-
-            if (line.find(name) >= 0) {
+            int a = line.find(name);
+            if (a >= 0) {
                 return line;
             }
         }
@@ -26,15 +26,19 @@ string logic::login(const string path, string name)
             return "";
         }
     }
-
-
-
     
 }
 
-void logic::registration(const string path)
+void logic::registration(const string path, string name)
 {
+    getInf inf(path);
+    string id;
+    string line;
 
+    id=inf.get_id_new_user();
+    
+    line = name + " " + "student" + " " + id;
 
+    inf.set_user(line);
 
 }

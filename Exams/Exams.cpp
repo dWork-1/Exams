@@ -29,16 +29,17 @@ int main()
         {
         case 1:
             user=brain.login(path_users, screen.get_user());
+            cout << endl << user << endl;
             break;
         case 2:
-            brain.registration(path_users);
+            brain.registration(path_users, screen.get_user());
             break;
         default:
             break;
         }
         if (user.size() != 0) {
             screen.swtch(3);
-            break;
+            
         }
         else {
             //Мне кажется здесь стоит вывести сообщение,что не нашло такого пользователя в базе
