@@ -30,7 +30,8 @@ public:
 	bool open_stream_write();
 	void close_stream_write();
 
-	void set_mark();
+	void set_user(string);
+	string get_id_new_user();
 	
 };
 

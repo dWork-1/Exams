@@ -72,7 +72,7 @@ void getInf::set_mark(string student, exam Exam, string id_teacher, int mark)
 
 	string line;
 	while (get_line(line)) {
-		if (exam.find(line) >= 0) {
+		if (line.find(exam) >= 0) {
 			input.seekp(-1, input.cur);
 			char a = static_cast<char>(mark);
 			input.put(a);
@@ -88,14 +88,13 @@ void getInf::set_mark(string student, exam Exam, string id_teacher, int mark)
 bool getInf::open_stream_read()
 {
 	if (!input.is_open()) {
-		input.open(path, ios::in | ios::out | ios::binary);
+		input.open(path, ios::in | ios::out |ios::binary);
 	}
-	if (!input.eof()) {
+	if (input.eof()) {
 		input.close();
-	}
-	if (input.fail()) {
 		return false;
 	}
+
 	return true;
 }
 
@@ -117,5 +116,33 @@ bool getInf::open_stream_write()
 void getInf::close_stream_write()
 {
 	output.close();
+}
+
+void getInf::set_user(string line)
+{
+	open_stream_write();
+	output << endl << line;
+}
+
+string getInf::get_id_new_user()
+{
+	open_stream_read();
+
+	string id;
+	for (int i = -4; i < 0; i++) {
+		
+		input.seekp(i, input.end);
+		id += input.get();
+	}
+
+	int a=stoi(id);
+	a++;
+	id = to_string(a);
+	while (id.length()<4) {
+		id = "0" + id;
+	}
+
+	return id;
+
 }
 

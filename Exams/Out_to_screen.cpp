@@ -1,4 +1,5 @@
 #include "Out_to_screen.h"
+#include "Out_to_screen.h"
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -95,3 +96,5 @@ string Out_to_screen::get_user()
 {
 	return user_name;
 }
+
+

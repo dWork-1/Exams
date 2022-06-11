@@ -3,31 +3,52 @@
 #include "getInf.h"
 #include "logic.h"
 
+#include <Windows.h>
+
 #include<string>
 #include "Out_to_screen.h"
 
 int main()
 {
-    const string path_users = "user.txt";
+
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+
+    const string path_users = "users.txt";
     Out_to_screen screen;
     logic brain;
+    bool flag = true;
 
+    string user="";
 
-    screen.swtch(0);
-    int answer = screen.get_answer();
-    screen.swtch(answer);
-    switch (answer)
-    {
-    case 1:
-        brain.login(path_users);
-        break;
-    case 2:
-        brain.registration();
-        break;
-    default:
-        break;
+    while (flag) {
+        screen.swtch(0);
+        int answer = screen.get_answer();
+        screen.swtch(answer);
+        switch (answer)
+        {
+        case 1:
+            user=brain.login(path_users, screen.get_user());
+            cout << endl << user << endl;
+            break;
+        case 2:
+            brain.registration(path_users, screen.get_user());
+            break;
+        default:
+            break;
+        }
+        if (user.size() != 0) {
+            screen.swtch(3);
+            
+        }
+        else {
+            //Мне кажется здесь стоит вывести сообщение,что не нашло такого пользователя в базе
+            //Зарегестрируйтесь или попробуйте ввойти снова.
+        }
+        system("pause>nul");
     }
-    screen.menu_authorization();
+
+
 
     return EXIT_SUCCESS;
 }
