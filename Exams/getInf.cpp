@@ -3,38 +3,31 @@
 #include <fstream>
 #include <string>
 #include <cstring>
+#include "Out_to_screen.h"
+#include "teacher.h"
 using namespace std;
 
-struct out_to_screen
-{
-public:
-	void out_error(int type_error) {
-		switch (type_error) {
-		case 1:
-			cout << "Don`t find or can`t open file" << endl;
-		}
-	}
-};
-
-struct faculty
-{
-	string id;
-	string name;
-public:
-	string get_id_faculty() {
-		return id;
-	}
-};
-
-struct exam :faculty
+struct exam 
 {
 	int mark;
 	string id_exam;
 	string name_exam;
-public:
+	string id_faculty;
+	string name_faculty;
+	teacher professor;
+
+
 	string get_id_exam() {
 		return id_exam;
 	}
+
+	string get_id_faculty() {
+		return id_faculty;
+	}
+	string get_id_teacher() {
+		return professor.get_id();
+	}
+
 };
 
 getInf::getInf()
@@ -48,6 +41,7 @@ getInf::getInf(string path)
 
 getInf::~getInf()
 {
+	List.clear();
 }
 
 bool getInf::get_line(string& exam_line)
@@ -61,8 +55,10 @@ bool getInf::get_line(string& exam_line)
 
 void getInf::set_exam(string id_student, exam Exam, string id_teacher, int mark)
 {
+
+
 	open_stream_write();
-	string exam_line = id_student + Exam.get_id_faculty() + Exam.get_id_exam()+ id_teacher+ static_cast<char> (mark);
+	string exam_line = id_student + Exam.get_id_faculty() + Exam.get_id_exam()+ Exam.get_id_teacher() + static_cast<char> (mark);
 	output << endl << exam_line;
 }
 

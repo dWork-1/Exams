@@ -1,6 +1,9 @@
 #pragma once
 #include <fstream>
 #include <string>
+#include "student.h"
+#include <vector>
+
 using namespace std;
 
 struct exam;
@@ -11,6 +14,8 @@ class getInf
 	string path;
 	fstream input;
 	fstream output;
+
+	vector<student> List;
 public:
 	getInf();
 	getInf(string);

@@ -143,6 +143,7 @@
     <ClCompile Include="getInf.cpp" />
     <ClCompile Include="logic.cpp" />
     <ClCompile Include="student.cpp" />
+    <ClCompile Include="teacher.cpp" />
     <ClCompile Include="user.cpp" />
     <ClCompile Include="Out_to_screen.cpp" />
   </ItemGroup>
@@ -150,6 +151,7 @@
     <ClInclude Include="getInf.h" />
     <ClInclude Include="logic.h" />
     <ClInclude Include="student.h" />
+    <ClInclude Include="teacher.h" />
     <ClInclude Include="user.h" />
     <ClInclude Include="Out_to_screen.h" />
   </ItemGroup>
