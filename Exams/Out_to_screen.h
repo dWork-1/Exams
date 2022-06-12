@@ -20,6 +20,8 @@ public:
 	void menu_middle_marks();
 	void menu_solution();
 
+	void menu_user_error();
+
 	// Добавил метод для считывания имени пользователя
 	void get_answer(string&);
 	//Добали геттер для user

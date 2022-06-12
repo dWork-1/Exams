@@ -41,7 +41,14 @@ void Out_to_screen::swtch(int a)
 	case 6:
 		menu_solution();
 		break;
+	case 7:
+		menu_user_error();
+		break;
 	default:
+		cerr << "Ошибка! Неверный ввод символа." << endl;
+		system("pause");
+		system("cls");
+		swtch(0);
 		break;
 	}
 }
@@ -60,7 +67,7 @@ void Out_to_screen::menu_login()
 	cout << "\tЧтобы войти в систему, введите Ваш логин." << endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 	cout << "\tLogin : ";
-	cin >> user_name;
+	get_answer(user_name);
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 	swtch(3);
 }
@@ -70,7 +77,7 @@ void Out_to_screen::menu_new_login()
 	cout << "\tВведите логин нового пользователя." << endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 	cout << "\tLogin : ";
-	cin >> user_name;
+	get_answer(user_name);
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl;
 	swtch(3);
 }
@@ -79,16 +86,16 @@ void Out_to_screen::menu_authorization()
 {
 	cout << endl;
 	cout << "\tВход потвержден." << endl;
-	cout << "\tДобро пожаловать, " << user_name << "." << endl;
+	cout << "\tДобро пожаловать, " << get_user() << "." << endl; // поменяла на get_user
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
-	setw(4);
+	swtch(4);
 }
 
 int Out_to_screen::get_answer()
 {
 	unsigned int a;
 	cin >> a;
-	if (cin.fail()) 
+	if (cin.fail())
 	{
 		cin.clear();
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -103,7 +110,7 @@ int Out_to_screen::get_answer()
 void Out_to_screen::get_answer(string& a)
 {
 	getline(cin, a);
-	return ;
+	return;
 }
 string Out_to_screen::get_user()
 {
@@ -133,3 +140,8 @@ void Out_to_screen::menu_solution()
 	//
 }
 
+void Out_to_screen::menu_user_error()
+{
+	cerr << "Ошибка! Такого пользователя не существует." << endl;
+	swtch(0);
+}
