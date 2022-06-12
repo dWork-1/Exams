@@ -41,7 +41,7 @@ getInf::getInf(string path)
 
 getInf::~getInf()
 {
-	List.clear();
+	//List.clear();
 }
 
 bool getInf::get_line(string& exam_line)

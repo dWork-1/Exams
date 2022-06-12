@@ -26,7 +26,7 @@ string logic::login(const string path, string name)
             return "";
         }
     }
-    
+    return "";
 }
 
 void logic::registration(const string path, string name)

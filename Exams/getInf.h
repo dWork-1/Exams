@@ -15,7 +15,7 @@ class getInf
 	fstream input;
 	fstream output;
 
-	vector<student> List;
+	//vector<student> list;
 public:
 	getInf();
 	getInf(string);

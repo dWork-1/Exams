@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="exam.cpp" />
     <ClCompile Include="Exams.cpp" />
     <ClCompile Include="getInf.cpp" />
     <ClCompile Include="logic.cpp" />
@@ -148,6 +149,7 @@
     <ClCompile Include="Out_to_screen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="exam.h" />
     <ClInclude Include="getInf.h" />
     <ClInclude Include="logic.h" />
     <ClInclude Include="student.h" />
