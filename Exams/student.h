@@ -10,6 +10,7 @@ struct exam;
 class student :
     public user
 {
+    int col_exam;
     vector<exam> exams_list;
 
 public:
