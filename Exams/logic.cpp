@@ -42,3 +42,6 @@ void logic::registration(const string path, string name)
     inf.set_user(line);
 
 }
+
+
+

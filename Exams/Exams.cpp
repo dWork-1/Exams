@@ -48,7 +48,9 @@ int main()
         system("pause>nul");
     }
 
-
+    if (user.find("student")>0) {
+        screen.swtch();
+    }
 
     return EXIT_SUCCESS;
 }
