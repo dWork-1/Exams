@@ -4,7 +4,7 @@
 #include "logic.h"
 #include "user.h"
 #include <Windows.h>
-
+#include <cstdlib>
 #include<string>
 #include "Out_to_screen.h"
 
@@ -14,8 +14,8 @@
 
 int main()
 {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
+    //SetConsoleCP(1251);
+    //SetConsoleOutputCP(1251);
 
     const string path_users = "users.txt";
     Out_to_screen screen;
@@ -51,27 +51,14 @@ int main()
         system("pause>nul");
         if (user.get_type() != "student") {
 
-            screen.out_text_to_display("К сожалению, на данный момент, использование функций преподавателей\n невозможно. Просим прощения за неудобства.\n");
+            screen.out_text_to_display("пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ\n пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.\n");
             continue;
         }
     }
-    while(true){
-        int answer = 0;
-       screen.get_answer();
-       switch (answer)
-       {
-       case 1:
-           //user = brain.login(path_users, screen.get_user());
-           break;
-       case 2:
-          // brain.registration(path_users, screen.get_user());
-           break;
-       default:
-           break;
-       }
-    }
-
-    
+ 
+    screen.menu_exams_list();
+    screen.menu_middle_marks();
+    screen.
 
     return EXIT_SUCCESS;
 }

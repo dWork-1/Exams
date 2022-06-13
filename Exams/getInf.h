@@ -21,13 +21,13 @@ public:
 	~getInf();
 
 	
-	//Функция должна вернуть строку из файла 
+	//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ 
 	bool get_line(string&);
-	//Функция для студента добавляет экзамен в файл marks.txt
-	void set_exam(string student, exam Examб, int);
+	//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ marks.txt
+	void set_exam(string student, exam Exam, int);
 
-	void set_mark(string student, exam Examб, int);
-	//открытие и закрытие базы данных 
+	void set_mark(string student, exam Exam, int);
+	//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ 
 	bool open_stream_read();
 	void close_stream_read();
 

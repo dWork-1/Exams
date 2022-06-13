@@ -70,7 +70,7 @@ void Out_to_screen::menu_login()
 	cout << "\tLogin : ";
 	get_answer(user_name);
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
-	swtch(3);
+
 }
 
 void Out_to_screen::menu_new_login()
@@ -89,7 +89,7 @@ void Out_to_screen::menu_authorization()
 	cout << "\tВход потвержден." << endl;
 	cout << "\tДобро пожаловать, " << get_user() << "." << endl; // поменяла на get_user
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
-	swtch(4);
+
 }
 
 int Out_to_screen::get_answer()
@@ -123,7 +123,7 @@ void Out_to_screen::menu_exams_list()
 	cout << endl;
 	cout << "\tСписок Ваших экзаменов :" << endl;
 	//
-	swtch(5);
+
 }
 
 void Out_to_screen::menu_middle_marks()
@@ -131,15 +131,14 @@ void Out_to_screen::menu_middle_marks()
 	cout << endl;
 	cout << "\tВаш средний балл :" << endl;
 	//
-	swtch(6);
+
 }
 
 void Out_to_screen::menu_solution()
 {
 	cout << endl << endl;
 	cout << "\tРезультат :" << endl;
-	//
-	swtch(7);
+
 }
 
 void Out_to_screen::out_text_to_display(string text)
