@@ -38,6 +38,8 @@ int main()
         case 2:
             brain.registration(path_users, screen.get_user());
             break;
+        case 0:
+            exit(0);
         default:
             break;
         }
@@ -53,12 +55,13 @@ int main()
 
             screen.out_text_to_display("� ���������, �� ������ ������, ������������� ������� ��������������\n ����������. ������ �������� �� ����������.\n");
             continue;
-        }
+        } 
+        screen.menu_exams_list();
+        screen.menu_middle_marks();
+        screen.menu_solution();
     }
  
-    screen.menu_exams_list();
-    screen.menu_middle_marks();
-    screen.
+
 
     return EXIT_SUCCESS;
 }
