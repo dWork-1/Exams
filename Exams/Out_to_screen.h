@@ -16,6 +16,11 @@ public:
 	void menu_new_login();
 	void menu_authorization();
 	int get_answer();
+	void menu_exams_list();
+	void menu_middle_marks();
+	void menu_solution();
+
+	void menu_user_error();
 
 	// ƒобавил метод дл€ считывани€ имени пользовател€
 	void get_answer(string&);

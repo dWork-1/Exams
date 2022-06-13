@@ -1,5 +1,4 @@
 #include "Out_to_screen.h"
-#include "Out_to_screen.h"
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -33,51 +32,69 @@ void Out_to_screen::swtch(int a)
 	case 3:
 		menu_authorization();
 		break;
+	case 4:
+		menu_exams_list();
+		break;
+	case 5:
+		menu_middle_marks();
+		break;
+	case 6:
+		menu_solution();
+		break;
+	case 7:
+		menu_user_error();
+		break;
 	default:
+		cerr << "ÐžÑˆÐ¸Ð±ÐºÐ°! ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´ ÑÐ¸Ð¼Ð²Ð¾Ð»Ð°." << endl;
+		system("pause");
+		system("cls");
+		swtch(0);
 		break;
 	}
 }
 
 void Out_to_screen::menu_option()
 {
-	cout << "\tÄëÿ âõîäà â ñèñòåìó -> 1." << endl;
-	cout << "\tÄëÿ ðåãèñòðàöèè íîâîãî ïîëüçîâàòåëÿ -> 2." << endl;
+	cout << "\tÐ”Ð»Ñ Ð²Ñ…Ð¾Ð´Ð° Ð² ÑÐ¸ÑÑ‚ÐµÐ¼Ñƒ -> 1." << endl;
+	cout << "\tÐ”Ð»Ñ Ñ€ÐµÐ³Ð¸ÑÑ‚Ñ€Ð°Ñ†Ð¸Ð¸ Ð½Ð¾Ð²Ð¾Ð³Ð¾ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ -> 2." << endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
-	cout << "\tÂàø âûáîð : ";
+	cout << "\tÐ’Ð°Ñˆ Ð²Ñ‹Ð±Ð¾Ñ€ : ";
 }
 
 void Out_to_screen::menu_login()
 {
-	cout << "\t×òîáû âîéòè â ñèñòåìó, ââåäèòå Âàø ëîãèí." << endl;
+	cout << "\tÐ§Ñ‚Ð¾Ð±Ñ‹ Ð²Ð¾Ð¹Ñ‚Ð¸ Ð² ÑÐ¸ÑÑ‚ÐµÐ¼Ñƒ, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð’Ð°Ñˆ Ð»Ð¾Ð³Ð¸Ð½." << endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 	cout << "\tLogin : ";
 	get_answer(user_name);
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
+	swtch(3);
 }
 
 void Out_to_screen::menu_new_login()
 {
-	cout << "\tÂâåäèòå ëîãèí íîâîãî ïîëüçîâàòåëÿ." << endl;
+	cout << "\tÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð»Ð¾Ð³Ð¸Ð½ Ð½Ð¾Ð²Ð¾Ð³Ð¾ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ." << endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 	cout << "\tLogin : ";
 	get_answer(user_name);
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl;
+	swtch(3);
 }
 
 void Out_to_screen::menu_authorization()
 {
 	cout << endl;
-	cout << "\tÂõîä ïîòâåðæäåí." << endl;
-	cout << "\tÄîáðî ïîæàëîâàòü, " << user_name << "."<<endl;
+	cout << "\tÐ’Ñ…Ð¾Ð´ Ð¿Ð¾Ñ‚Ð²ÐµÑ€Ð¶Ð´ÐµÐ½." << endl;
+	cout << "\tÐ”Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ, " << get_user() << "." << endl; // Ð¿Ð¾Ð¼ÐµÐ½ÑÐ»Ð° Ð½Ð° get_user
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
-
+	swtch(4);
 }
 
 int Out_to_screen::get_answer()
 {
 	unsigned int a;
 	cin >> a;
-	if (cin.fail()) 
+	if (cin.fail())
 	{
 		cin.clear();
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -92,11 +109,37 @@ int Out_to_screen::get_answer()
 void Out_to_screen::get_answer(string& a)
 {
 	getline(cin, a);
-	return ;
+	return;
 }
 string Out_to_screen::get_user()
 {
 	return user_name;
 }
 
+void Out_to_screen::menu_exams_list()
+{
+	cout << endl;
+	cout << "\tÐ¡Ð¿Ð¸ÑÐ¾Ðº Ð’Ð°ÑˆÐ¸Ñ… ÑÐºÐ·Ð°Ð¼ÐµÐ½Ð¾Ð² :" << endl;
+	//
+}
 
+void Out_to_screen::menu_middle_marks()
+{
+	cout << endl;
+	cout << "\tÐ’Ð°Ñˆ ÑÑ€ÐµÐ´Ð½Ð¸Ð¹ Ð±Ð°Ð»Ð» :" << endl;
+	//
+
+}
+
+void Out_to_screen::menu_solution()
+{
+	cout << endl << endl;
+	cout << "\tÐ ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ :" << endl;
+	//
+}
+
+void Out_to_screen::menu_user_error()
+{
+	cerr << "ÐžÑˆÐ¸Ð±ÐºÐ°! Ð¢Ð°ÐºÐ¾Ð³Ð¾ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚." << endl;
+
+}

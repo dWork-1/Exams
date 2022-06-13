@@ -8,25 +8,33 @@ logic::logic()
 {
 }
 
-string logic::login(const string path, string name)
+user logic::login(const string path, string name)
 {
     getInf inf(path);
     
+    user man;
 
     bool flag = true;
     while (flag) {
         string line;
         if (inf.get_line(line)) {
             int a = line.find(name);
+
+            stringstream ss;
+            ss << line;
+
             if (a >= 0) {
-                return line;
+                ss >> man;
+                return man;
             }
         }
         else {
-            return "";
+            flag = false;
         }
     }
-    return "";
+
+    return man;
+
 }
 
 void logic::registration(const string path, string name)

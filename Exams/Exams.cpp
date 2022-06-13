@@ -2,7 +2,7 @@
 #include <iostream>
 #include "getInf.h"
 #include "logic.h"
-
+#include "user.h"
 #include <Windows.h>
 
 #include<string>
@@ -19,7 +19,7 @@ int main()
     logic brain;
     bool flag = true;
 
-    string user="";
+    user user;
 
     while (flag) {
         screen.swtch(0);
@@ -29,7 +29,6 @@ int main()
         {
         case 1:
             user=brain.login(path_users, screen.get_user());
-            cout << endl << user << endl;
             break;
         case 2:
             brain.registration(path_users, screen.get_user());
@@ -37,19 +36,18 @@ int main()
         default:
             break;
         }
-        if (user.size() != 0) {
+        if (user.get_name().size() != 0) {
             screen.swtch(3);
             
         }
         else {
-            //Мне кажется здесь стоит вывести сообщение,что не нашло такого пользователя в базе
-            //Зарегестрируйтесь или попробуйте ввойти снова.
+            screen.swtch(7);
         }
         system("pause>nul");
     }
 
-    if (user.find("student")>0) {
-        screen.swtch();
+    if (user.get_type()=="student") {
+
     }
 
     return EXIT_SUCCESS;
