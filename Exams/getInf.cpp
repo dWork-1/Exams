@@ -5,30 +5,31 @@
 #include <cstring>
 #include "Out_to_screen.h"
 #include "teacher.h"
+#include "exam.h"
 using namespace std;
 
-struct exam 
-{
-	int mark;
-	string id_exam;
-	string name_exam;
-	string id_faculty;
-	string name_faculty;
-	teacher professor;
-
-
-	string get_id_exam() {
-		return id_exam;
-	}
-
-	string get_id_faculty() {
-		return id_faculty;
-	}
-	string get_id_teacher() {
-		return professor.get_id();
-	}
-
-};
+//struct exam 
+//{
+//	int mark;
+//	string id_exam;
+//	string name_exam;
+//	string id_faculty;
+//	string name_faculty;
+//	teacher professor;
+//
+//
+//	string get_id_exam() {
+//		return id_exam;
+//	}
+//
+//	string get_id_faculty() {
+//		return id_faculty;
+//	}
+//	string get_id_teacher() {
+//		return professor.get_id();
+//	}
+//
+//};
 
 getInf::getInf()
 {
@@ -53,18 +54,18 @@ bool getInf::get_line(string& exam_line)
 		return false;
 }
 
-void getInf::set_exam(string id_student, exam Exam, string id_teacher, int mark)
+void getInf::set_exam(string id_student, exam Exam, int mark)
 {
 
 
 	open_stream_write();
-	string exam_line = id_student + Exam.get_id_faculty() + Exam.get_id_exam()+ Exam.get_id_teacher() + static_cast<char> (mark);
+	string exam_line = id_student + Exam.get_id_exam()+ Exam.get_id_teacher() + static_cast<char> (mark);
 	output << endl << exam_line;
 }
 
-void getInf::set_mark(string student, exam Exam, string id_teacher, int mark)
+void getInf::set_mark(string student, exam Exam, int mark)
 {
-	string exam=student+ Exam.get_id_faculty() + Exam.get_id_exam()+ id_teacher;
+	string exam=student + Exam.get_id_exam()+ Exam.get_id_teacher();
 
 	string line;
 	while (get_line(line)) {

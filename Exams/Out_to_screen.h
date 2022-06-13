@@ -20,6 +20,8 @@ public:
 	void menu_middle_marks();
 	void menu_solution();
 
+	void out_text_to_display(string );
+
 	void menu_user_error();
 
 	// ƒобавил метод дл€ считывани€ имени пользовател€

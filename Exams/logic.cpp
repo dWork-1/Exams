@@ -18,7 +18,7 @@ user logic::login(const string path, string name)
     while (flag) {
         string line;
         if (inf.get_line(line)) {
-            int a = line.find(name);
+            int a = (int)line.find(name);
 
             stringstream ss;
             ss << line;
