@@ -21,6 +21,8 @@ int main()
 
     user user;
 
+
+
     while (flag) {
         screen.swtch(0);
         int answer = screen.get_answer();
@@ -28,7 +30,7 @@ int main()
         switch (answer)
         {
         case 1:
-            user=brain.login(path_users, screen.get_user());
+            user = brain.login(path_users, screen.get_user());
             break;
         case 2:
             brain.registration(path_users, screen.get_user());
@@ -38,17 +40,35 @@ int main()
         }
         if (user.get_name().size() != 0) {
             screen.swtch(3);
-            
+
         }
         else {
             screen.swtch(7);
         }
         system("pause>nul");
+        if (user.get_type() != "student") {
+
+            screen.out_text_to_display("К сожалению, на данный момент, использование функций преподавателей\n невозможно. Просим прощения за неудобства.\n");
+            continue;
+        }
+    }
+    while(true){
+        int answer = 0;
+       screen.get_answer();
+       switch (answer)
+       {
+       case 1:
+           //user = brain.login(path_users, screen.get_user());
+           break;
+       case 2:
+          // brain.registration(path_users, screen.get_user());
+           break;
+       default:
+           break;
+       }
     }
 
-    if (user.get_type()=="student") {
-
-    }
+    
 
     return EXIT_SUCCESS;
 }

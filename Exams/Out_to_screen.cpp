@@ -138,6 +138,11 @@ void Out_to_screen::menu_solution()
 	//
 }
 
+void Out_to_screen::out_text_to_display(string text)
+{
+	cout << text;
+}
+
 void Out_to_screen::menu_user_error()
 {
 	cerr << "Ошибка! Такого пользователя не существует." << endl;

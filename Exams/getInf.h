@@ -2,11 +2,10 @@
 #include <fstream>
 #include <string>
 #include "student.h"
+#include "exam.h"
 #include <vector>
 
 using namespace std;
-
-struct exam;
 
 
 class getInf
@@ -25,9 +24,9 @@ public:
 	//Функция должна вернуть строку из файла 
 	bool get_line(string&);
 	//Функция для студента добавляет экзамен в файл marks.txt
-	void set_exam(string student, exam Examб, string, int);
+	void set_exam(string student, exam Examб, int);
 
-	void set_mark(string student, exam Examб, string, int);
+	void set_mark(string student, exam Examб, int);
 	//открытие и закрытие базы данных 
 	bool open_stream_read();
 	void close_stream_read();

@@ -1,11 +1,11 @@
 #pragma once
 #include "user.h"
 #include "getInf.h"
+#include "exam.h"
 #include <vector>
 
 using namespace std;
 
-struct exam;
 
 class student :
     public user
