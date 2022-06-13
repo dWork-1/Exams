@@ -51,13 +51,11 @@ bool getInf::get_line(string& exam_line)
 		getline(input, exam_line);
 		return true;
 	}
-		return false;
+	return false;
 }
 
 void getInf::set_exam(string id_student, exam Exam, int mark)
 {
-
-
 	open_stream_write();
 	string exam_line = id_student + Exam.get_id_exam()+ Exam.get_id_teacher() + static_cast<char> (mark);
 	output << endl << exam_line;

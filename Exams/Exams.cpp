@@ -8,6 +8,10 @@
 #include<string>
 #include "Out_to_screen.h"
 
+
+#pragma execution_character_set("utf-8")
+
+
 int main()
 {
     SetConsoleCP(1251);

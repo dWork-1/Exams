@@ -51,5 +51,23 @@ void logic::registration(const string path, string name)
 
 }
 
+string logic::entered(const string path)
+{
+    getInf input(path);
+    string line;
+    string fuculty;
+
+    int all_marks;
+
+    while (input.get_line(line))
+    {
+        stringstream ss;
+        ss << line;
+
+    }
+
+    return line;
+}
+
 
 

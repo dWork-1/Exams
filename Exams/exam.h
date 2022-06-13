@@ -36,11 +36,13 @@ public:
 
 
 		void set_id_teacher(string id) {
-
+			professor.set_id(id);
 		}
 		string get_id_teacher() {
 			return professor.get_id();
 		}
+
+		//friend 
 
 };
 
