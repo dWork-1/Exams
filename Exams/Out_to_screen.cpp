@@ -5,9 +5,11 @@
 
 using namespace std;
 
+
 Out_to_screen::Out_to_screen()
 {
 	user_name = "Noname";
+
 }
 
 Out_to_screen::~Out_to_screen() { }
@@ -121,6 +123,7 @@ void Out_to_screen::menu_exams_list()
 	cout << endl;
 	cout << "\tСписок Ваших экзаменов :" << endl;
 	//
+	swtch(5);
 }
 
 void Out_to_screen::menu_middle_marks()
@@ -128,7 +131,7 @@ void Out_to_screen::menu_middle_marks()
 	cout << endl;
 	cout << "\tВаш средний балл :" << endl;
 	//
-
+	swtch(6);
 }
 
 void Out_to_screen::menu_solution()
@@ -136,6 +139,7 @@ void Out_to_screen::menu_solution()
 	cout << endl << endl;
 	cout << "\tРезультат :" << endl;
 	//
+	swtch(7);
 }
 
 void Out_to_screen::out_text_to_display(string text)
