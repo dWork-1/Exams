@@ -116,14 +116,14 @@ string Out_to_screen::get_user()
 	return user_name;
 }
 
-void Out_to_screen::menu_exams_list()
+void Out_to_screen::menu_exams_list(string list)
 {
 	cout << endl;
 	cout << "\tСписок Ваших экзаменов :" << endl;
 	//
 }
 
-void Out_to_screen::menu_middle_marks()
+void Out_to_screen::menu_middle_marks(double mark)
 {
 	cout << endl;
 	cout << "\tВаш средний балл :" << endl;
@@ -131,7 +131,7 @@ void Out_to_screen::menu_middle_marks()
 
 }
 
-void Out_to_screen::menu_solution()
+void Out_to_screen::menu_solution(string s)
 {
 	cout << endl << endl;
 	cout << "\tРезультат :" << endl;

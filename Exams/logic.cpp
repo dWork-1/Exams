@@ -51,5 +51,15 @@ void logic::registration(const string path, string name)
 
 }
 
-
+void logic::middle_mark(int& mark, string path)
+{
+    getInf input(path)
+        int sum = 0, k = 0;
+    while (input.get_line())
+    {
+        sum += mark;
+        k++;
+    }
+    mark = sum / k;
+}
 

@@ -14,7 +14,7 @@ public:
 	user login(const string path, string);
 	void registration(const string, string);
 
-
+	void middle_mark(int& mark, string path);
 
 };
 
