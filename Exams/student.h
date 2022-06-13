@@ -3,14 +3,15 @@
 #include "getInf.h"
 #include <vector>
 
+using namespace std;
+
 struct exam;
 
 class student :
     public user
 {
-   // vector<exam> exams_list;
-
-    getInf reader;
+    int col_exam;
+    vector<exam> exams_list;
 
 public:
     student(string, string);

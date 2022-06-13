@@ -7,6 +7,8 @@
     <ClCompile Include="student.cpp" />
     <ClCompile Include="user.cpp" />
     <ClCompile Include="Out_to_screen.cpp" />
+    <ClCompile Include="teacher.cpp" />
+    <ClCompile Include="exam.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="getInf.h" />
@@ -14,5 +16,7 @@
     <ClInclude Include="student.h" />
     <ClInclude Include="user.h" />
     <ClInclude Include="Out_to_screen.h" />
+    <ClInclude Include="teacher.h" />
+    <ClInclude Include="exam.h" />
   </ItemGroup>
 </Project>

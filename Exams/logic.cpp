@@ -32,8 +32,9 @@ user logic::login(const string path, string name)
             flag = false;
         }
     }
+
     return man;
-    
+
 }
 
 void logic::registration(const string path, string name)
@@ -49,3 +50,6 @@ void logic::registration(const string path, string name)
     inf.set_user(line);
 
 }
+
+
+
