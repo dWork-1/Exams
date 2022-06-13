@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "user.h"
 using namespace std;
 
 
@@ -10,7 +11,7 @@ public:
 	logic();
 
 
-	string login(const string path, string);
+	user login(const string path, string);
 	void registration(const string, string);
 
 };

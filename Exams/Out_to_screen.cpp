@@ -59,7 +59,6 @@ void Out_to_screen::menu_option()
 	cout << "\tДля регистрации нового пользователя -> 2." << endl;
 	cout << "\t" << setfill('-') << setw(41) << "-" << endl << endl;
 	cout << "\tВаш выбор : ";
-	get_answer();
 }
 
 void Out_to_screen::menu_login()
@@ -122,7 +121,6 @@ void Out_to_screen::menu_exams_list()
 	cout << endl;
 	cout << "\tСписок Ваших экзаменов :" << endl;
 	//
-	swtch(5);
 }
 
 void Out_to_screen::menu_middle_marks()
@@ -130,7 +128,7 @@ void Out_to_screen::menu_middle_marks()
 	cout << endl;
 	cout << "\tВаш средний балл :" << endl;
 	//
-	swtch(6);
+
 }
 
 void Out_to_screen::menu_solution()
@@ -143,5 +141,5 @@ void Out_to_screen::menu_solution()
 void Out_to_screen::menu_user_error()
 {
 	cerr << "Ошибка! Такого пользователя не существует." << endl;
-	swtch(0);
+
 }
