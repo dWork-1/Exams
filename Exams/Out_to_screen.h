@@ -16,9 +16,9 @@ public:
 	void menu_new_login();
 	void menu_authorization();
 	int get_answer();
-	void menu_exams_list();
+	void menu_exams_list(string);
 	void menu_middle_marks();
-	void menu_solution();
+	void menu_solution(string);
 
 	void out_text_to_display(string );
 

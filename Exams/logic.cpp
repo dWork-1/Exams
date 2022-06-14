@@ -8,6 +8,11 @@ logic::logic()
 {
 }
 
+void logic::set_type_users(string user)
+{
+    this->type_users = user;
+}
+
 user logic::login(const string path, string name)
 {
     getInf inf(path);
@@ -51,23 +56,73 @@ void logic::registration(const string path, string name)
 
 }
 
-string logic::entered(const string path)
+string logic::entered(vector<student>& list)
 {
-    getInf input(path);
-    string line;
-    string fuculty;
+    string text;
+    int max = list.size();
+    for (int i = 0; i < max;i++ ) {
+        int z = list.at(i).get_id().find(type_users);
+        if (z>=0) {
+            int max_x = list.at(i).get_size_list();
+            for (int y = 0; y < max_x; y++) {
+                text = list.at(i).get_list(y).get_name_faculty() + " " +to_string( list.at(i).get_list(y).get_mark()) + "\n";
+            }
 
-    int all_marks;
+            break;
+        }
+    }
+    return text;
+}
 
-    while (input.get_line(line))
-    {
-        stringstream ss;
-        ss << line;
+string logic::entered_list(vector<student>& list)
+{
+    int mark=0;
+    int place=0;
 
+    string text;
+    student man;
+
+
+    int max = list.size();
+    for (int i = 0; i < max; i++) {
+        if (list.at(i).get_id() == type_users) {
+            man = list.at(i);
+            break;
+        }
     }
 
-    return line;
+    int max_x = man.get_size_list();
+    for (int i = 0; i < max_x; i++) {
+        mark = man.get_list(i).get_mark();
+
+
+        for (int y = 0; y < max; y++) {
+            if (list.at(i).get_id() == type_users) {
+                continue;
+            }
+
+            int size = list.at(y).get_size_list();
+            for (int z = 0; z < size; z++) {
+                bool first = list.at(i).get_list(z).get_name_faculty() == man.get_list(i).get_name_faculty();
+                bool second = list.at(i).get_list(z).get_mark() > man.get_list(i).get_mark();
+                if (first && second) {
+                    place++;
+                }
+            }
+        }
+        if (place < man.get_list(i).get_place()) {
+            text = "\t" + man.get_list(i).get_name_faculty() + " : Поступил";
+        }
+        else {
+            text = "\t" + man.get_list(i).get_name_faculty() + " :  Непоступил";
+        }
+    }
+
+
+    
+    return text;
 }
+
 
 
 

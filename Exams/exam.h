@@ -6,6 +6,7 @@ using namespace std;
 class exam
 {
 		int mark;
+		int place;
 		string id_exam;
 		string name_exam;
 
@@ -18,6 +19,21 @@ public:
 	}
 		string get_id_exam() {
 			return id_exam;
+		}
+
+		void set_place(int id) {
+			this->place = id;
+		}
+		int get_place() {
+			return place;
+		}
+
+
+		void set_mark(int id) {
+			this->mark = id;
+		}
+		int get_mark() {
+			return mark;
 		}
 
 		void set_name_exam(string id) {
@@ -42,7 +58,7 @@ public:
 			return professor.get_id();
 		}
 
-		//friend 
+		friend istream& operator >>(stringstream&, exam&);
 
 };
 

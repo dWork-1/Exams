@@ -14,7 +14,6 @@ class getInf
 	fstream input;
 	fstream output;
 
-	//vector<student> list;
 public:
 	getInf();
 	getInf(string);
@@ -37,7 +36,7 @@ public:
 	void set_user(string);
 	string get_id_new_user();
 
-
+	
 	
 };
 

@@ -18,12 +18,37 @@ int main()
     //SetConsoleOutputCP(1251);
 
     const string path_users = "users.txt";
+    const string path_mark = "marks.txt";
     Out_to_screen screen;
     logic brain;
+    getInf file_user(path_users);
+    getInf file_mark(path_mark);
+
     bool flag = true;
 
     user user;
 
+    vector<student> list;
+
+    string line;
+
+    while (file_user.get_line(line)) {
+        stringstream ss;
+        student man;
+        ss << line;
+        ss >> man;
+        while (file_mark.get_line(line)) {
+            int i = line.find(man.get_id());
+            if (i >= 0) {
+                stringstream sss;
+                exam ex;
+                ss << line;
+                ss >> ex;
+                man.set_list(ex);
+            }
+        }
+        list.push_back(man);
+    }
 
 
     while (flag) {
@@ -56,9 +81,13 @@ int main()
             screen.out_text_to_display("� ���������, �� ������ ������, ������������� ������� ��������������\n ����������. ������ �������� �� ����������.\n");
             continue;
         } 
-        screen.menu_exams_list();
+
+        brain.set_type_users(user.get_id());
+        system("cls");
+        screen.menu_exams_list(brain.entered(list));
         screen.menu_middle_marks();
-        screen.menu_solution();
+        screen.menu_solution(brain.entered_list(list));
+        system("pause>nul");
     }
  
 

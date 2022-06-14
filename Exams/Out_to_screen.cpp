@@ -35,13 +35,13 @@ void Out_to_screen::swtch(int a)
 		menu_authorization();
 		break;
 	case 4:
-		menu_exams_list();
+		menu_exams_list(nullptr);
 		break;
 	case 5:
 		menu_middle_marks();
 		break;
 	case 6:
-		menu_solution();
+		//menu_solution();
 		break;
 	case 7:
 		menu_user_error();
@@ -118,11 +118,11 @@ string Out_to_screen::get_user()
 	return user_name;
 }
 
-void Out_to_screen::menu_exams_list()
+void Out_to_screen::menu_exams_list(string text)
 {
 	cout << endl;
 	cout << "\tСписок Ваших экзаменов :" << endl;
-	//
+	cout << text;
 
 }
 
@@ -134,11 +134,11 @@ void Out_to_screen::menu_middle_marks()
 
 }
 
-void Out_to_screen::menu_solution()
+void Out_to_screen::menu_solution(string text)
 {
 	cout << endl << endl;
 	cout << "\tРезультат :" << endl;
-
+	cout << text;
 }
 
 void Out_to_screen::out_text_to_display(string text)
